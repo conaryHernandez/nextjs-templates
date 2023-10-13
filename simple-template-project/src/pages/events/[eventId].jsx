@@ -8,8 +8,6 @@ import { getEventById } from '../../../dummy-data';
 const EventDetails = () => {
   const router = useRouter();
 
-  console.log(router);
-
   const eventId = router.query.eventId;
   const event = getEventById(eventId);
 
