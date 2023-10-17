@@ -21,10 +21,20 @@ export async function getStaticProps() {
 
   const data = JSON.parse(jsonData);
 
+  if (!data) {
+    return {
+      redirect: {
+        destination: '/no-data',
+      },
+    };
+  }
+
   return {
     props: {
       products: data.products,
     },
+    revalidate: 15,
+    // notFound: true,
   };
 }
 
