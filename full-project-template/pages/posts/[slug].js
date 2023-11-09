@@ -1,10 +1,7 @@
+import PostContent from '../../components/Posts/PostContent';
+
 const Post = ({ post }) => {
-  return (
-    <div>
-      <h1>{post.title}</h1>
-      <p>{post.body}</p>
-    </div>
-  );
+  return <PostContent post={post} />;
 };
 
 export default Post;
