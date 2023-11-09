@@ -1,4 +1,4 @@
-import PostItem from '../PostItem/PostItem';
+import PostItem from '../PostItem';
 import classes from './PostsGrid.module.css';
 
 const PostsGrid = ({ posts }) => {
