@@ -3,7 +3,7 @@ import Hero from '../components/HomePage/Hero';
 
 export const DUMMY_POSTS = [
   {
-    slug: 'getting-started-with-nextjs',
+    slug: 'getting-stasrted-with-nextjs',
     title: 'Getting Started with NextJS',
     image: 'getting-started-nextjs.png',
     excerpt:
