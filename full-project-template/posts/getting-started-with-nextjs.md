@@ -1,10 +1,9 @@
 ---
 title: 'Getting started with NextJS'
-date: '2022-10-15'
+date: '2022-10-16'
 author: Conary
 image: getting-started-nextjs.png
-excerpt:
-      'NextJS is a the most popular framework for React! And not without reason...',
+excerpt: 'NextJS is a the most popular framework for React! And not without reason...'
 isFeatured: true
 ---
 
