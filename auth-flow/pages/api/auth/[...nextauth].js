@@ -5,10 +5,11 @@ import { connectDatabase } from '../../../lib/db';
 import { verifyPassword } from '../../../lib/auth';
 
 // NextAuth() executes and returns a handler function
-export default NextAuth({
+export const authOptions = {
   session: {
     strategy: 'jwt',
   },
+  secret: process.env.SESSION_SECRET,
   providers: [
     CredentialProvider({
       name: 'credentials',
@@ -41,4 +42,6 @@ export default NextAuth({
       },
     }),
   ],
-});
+};
+
+export default NextAuth(authOptions);
