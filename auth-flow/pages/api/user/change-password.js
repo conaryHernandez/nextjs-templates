@@ -1,8 +1,7 @@
 import { getServerSession } from 'next-auth';
 
-import { hashPassword, verifyPassword } from '../../../lib/auth';
+import { hashPassword, verifyPassword, authOptions } from '../../../lib/auth';
 import { connectDatabase } from '../../../lib/db';
-import { authOptions } from '../auth/[...nextauth]';
 
 async function handler(req, res) {
   if (req.method !== 'PATCH') {
@@ -44,7 +43,7 @@ async function handler(req, res) {
 
   const hashedPassword = await hashPassword(newPassword);
 
-  const result = await usersCollection.updateOne(
+  await usersCollection.updateOne(
     { email: userEmail },
     { $set: { password: hashedPassword } }
   );
